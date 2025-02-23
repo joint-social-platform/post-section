@@ -1,0 +1,815 @@
+/** @format */
+
+:root {
+  --transiton: ease 1s linear;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.coming_soon {
+  text-align: center;
+}
+
+body {
+  background-color: #000000;
+  font-family: "Catamaran", sans-serif;
+  font-size: 14px;
+}
+
+img {
+  display: block;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+nav {
+  background: #000000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+  align-items: center;
+  padding: 1em 3em;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+nav .logo {
+  width: 15%;
+}
+
+nav .logo img {
+  width: 5em;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 10px;
+  background-color: white;
+}
+
+nav .Search {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  border: 0.1em solid rgba(255, 255, 255, 0.24);
+  border-radius: 4em;
+  padding: 1em;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.Search input {
+  border: 0;
+  margin: 0;
+  background-color: transparent;
+  padding: 0.7em;
+  outline: none;
+  color: white;
+  width: 100%;
+}
+
+.navigation-icons ul {
+  display: flex;
+  flex-direction: row;
+  gap: 4em;
+  align-items: end;
+}
+
+.navigation-icons div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation-icons div:hover {
+  cursor: pointer;
+}
+
+.navigation-icons .videos {
+  display: flex;
+  flex-direction: row;
+}
+
+.dropdown img {
+  width: 60%;
+}
+
+.profile {
+  margin-left: 1em;
+}
+
+.navigation-icons .hamburger {
+  display: none;
+  width: 10em;
+}
+
+.hamburger .hamburger-icon,
+.hamburger .cross-icon {
+  display: none;
+}
+
+.navigation-icons ul div i {
+  font-size: 2.5em;
+}
+
+.black,
+.white {
+  width: 2.5em;
+  margin: 0;
+  padding: 0;
+}
+
+.black {
+  display: none;
+}
+
+.fullpage {
+  display: flex;
+  width: 99vw;
+}
+
+.sidebar {
+  width: 20%;
+  background: #000000;
+  color: white;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  position: fixed;
+  height: 100%;
+  top: 2.9em;
+  left: 0;
+}
+
+.sidebar > div {
+  background-color: #ffffff23;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.sidebar img {
+  width: 1.2em;
+}
+
+.sidebar div p {
+  text-align: center;
+  width: 100%;
+  font-size: 1.1em;
+}
+
+.groups {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+  margin: 0;
+}
+
+.groups div {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.groups div:hover {
+  cursor: pointer;
+  color: rgb(140, 116, 250);
+}
+
+.channel {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em auto;
+}
+
+.channel div {
+  display: flex;
+}
+
+.channel .send,
+.channel .add {
+  width: 0.9em;
+  margin: 0.2em;
+}
+
+.channel .send:hover,
+.channel .add:hover {
+  cursor: pointer;
+  color: rgb(140, 116, 250);
+  width: 0.85em;
+}
+
+.groupnames {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  width: 100%;
+  margin: 0;
+}
+
+.groupnames > div {
+  display: flex;
+  gap: 0.6em;
+  align-items: center;
+}
+
+.groupnames > div > img {
+  width: 2em;
+  padding: 0.2em;
+  height: 2em;
+  background-color: whitesmoke;
+  border-radius: 50%;
+}
+
+.groupnames > div:hover {
+  cursor: pointer;
+  color: rgb(140, 116, 250);
+}
+
+.all {
+  padding: 2em;
+  background-color: rgb(69, 45, 64);
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  overflow: scroll;
+  width: 80%;
+  border-top-left-radius: 1em;
+  position: relative;
+  top: 4em;
+  left: calc(100vw - 80%);
+}
+
+.right_arrow,
+#arrow {
+  display: none;
+}
+
+.upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2em;
+  padding-left: 8em;
+  font-size: 1.2em;
+  overflow-x: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: grey transparent;
+}
+
+.upper a {
+  text-decoration: none;
+  color: white;
+  margin: 0em 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upper a:hover {
+  color: rgb(140, 116, 250);
+}
+
+.upper > div > a > div {
+  width: 5px;
+  height: 5px;
+  background-color: transparent;
+  border-radius: 100%;
+  margin-top: 0.4em;
+}
+
+.upper a:hover > div {
+  background-color: white;
+}
+
+.upper > div {
+  display: flex;
+  align-items: center;
+}
+
+.upper img {
+  width: 2.5em;
+}
+
+h2 {
+  color: rgb(140, 116, 250);
+  display: block;
+}
+
+.img {
+  display: flex;
+  padding: 10px;
+  margin-bottom: 3em;
+  justify-content: space-between;
+  overflow-x: scroll;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  scrollbar-color: rgba(212, 212, 212, 0.34) transparent;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+
+.all img {
+  border-radius: 1em;
+  margin: 0.2em 1em;
+}
+
+.all {
+  overflow: hidden;
+  width: 80%;
+}
+
+/* ============================================= */
+/* video details container */
+.video_details_container {
+  display: flex;
+  align-items: end;
+  justify-content: space-evenly;
+}
+
+/* ============================================= */
+/* p-img*/
+.p-img {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  border-radius: 50% !important;
+}
+
+/* ============================================= */
+/* video name and details */
+.names_and_details {
+  color: white;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+/* ============================================= */
+/* images and love image container*/
+.images {
+  width: 25%;
+}
+
+.love_like_Image_container {
+  display: flex;
+  cursor: pointer;
+  justify-content: space-evenly;
+}
+
+/* ============================================= */
+/* like image,love image and add image */
+:is(.like_image, .love_image, .add_image) {
+  width: 1.3rem;
+  object-fit: cover;
+  margin: unset !important;
+}
+
+/* ==================================== */
+/* comment modal */
+/* desktop */
+.comment_modal {
+  top: 0%;
+  left: 0;
+  z-index: 22;
+  display: none;
+  position: fixed;
+  border-radius: 20px;
+  align-items: center;
+  width: 100% !important;
+  height: 100vh !important;
+  background-color: #000000dc;
+  justify-content: center !important;
+}
+
+/* ==================================== */
+/* comment container */
+.comment_container {
+  width: 60%;
+  height: 85%;
+  display: flex;
+  overflow: hidden;
+  border-radius: 15px;
+  flex-direction: column;
+  background-color: #000000;
+  align-items: unset !important;
+  justify-content: space-between;
+  box-shadow: 0px 0px 4px 4px rgba(211, 211, 211, 0.587);
+}
+
+/* ==================================== */
+/* comment header */
+.comment_header {
+  display: flex;
+  justify-content: space-evenly;
+  box-shadow: 0px 2px 4px 4px rgba(211, 211, 211, 0.76);
+}
+
+/* ==================================== */
+/* comment title */
+.comment_title {
+  width: 80%;
+  display: flex;
+  padding: 0.8rem;
+  font-size: 0.9rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==================================== */
+/* comment title */
+.comment_title h2 {
+  color: white;
+}
+
+/* ==================================== */
+/* close comment */
+.close_comment {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==================================== */
+/* comment close btn */
+.comment_close_btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  display: flex;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgray;
+}
+
+/* ==================================== */
+/* comment close btn */
+.comment_close_btn:hover {
+  background-color: darkgray;
+}
+
+/* ==================================== */
+/* comment body */
+.comment_body {
+  gap: 1rem;
+  height: 65%;
+  display: flex;
+  padding: 1rem;
+  overflow-y: scroll;
+  flex-direction: column;
+}
+
+/* ==================================== */
+/* commenter */
+.commenter {
+  gap: 0.6rem;
+  display: flex;
+}
+
+/* ==================================== */
+/* comment img */
+.commenter_img {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* ==================================== */
+/* Comment comment container*/
+.commenter_comment_container {
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: rgb(133, 133, 133);
+}
+
+/* ==================================== */
+/*Comment name*/
+.commenter_name {
+  color: black;
+  font-size: 0.7rem;
+  text-transform: capitalize;
+}
+
+/* ==================================== */
+/* Commenter comment*/
+.commenter_comment {
+  color: white;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+/* ==================================== */
+/* Comment  icons images*/
+.comment_icon_images {
+  display: flex;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: white;
+  align-items: center;
+  justify-content: space-evenly;
+  border-top: 2px solid darkgrey;
+  border-bottom: 2px solid darkgrey;
+}
+
+.comment_icon_images .love_image {
+  width: 1.28rem;
+}
+
+/* ==================================== */
+/* Comment images*/
+.comment_images {
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+/* ==================================== */
+/*user commenting input container */
+.user_commenting_input_container {
+  gap: 1rem;
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+}
+
+/* ==================================== */
+/* input container */
+.input_container {
+  width: 80%;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: rgb(133, 133, 133);
+}
+
+/* ==================================== */
+/* input  */
+.input_container input {
+  width: 100%;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  background-color: transparent;
+}
+
+.input_container:has(input:focus) {
+  border: 2px solid skyblue;
+}
+
+.input_container input::placeholder {
+  color: white;
+}
+
+/* ==================================== */
+/* input send icon */
+.input_send_icon {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: rgb(133, 133, 133);
+}
+
+/* ==================================== */
+/* comment modal */
+/* Ipad view */
+@media screen and (width <= 1023px) {
+  .comment_container {
+    width: 90%;
+    height: 85%;
+  }
+  .upper {
+    padding: 0;
+    height: 8vh;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .upper_sub_nav {
+    height: 100%;
+    gap: 0.5rem;
+  }
+
+  .upper_create_post {
+    height: 80%;
+    margin-bottom: 0.4rem;
+  }
+
+  .upper_sub_nav a,
+  .upper_create_post a {
+    width: max-content;
+    font-size: 1.1rem;
+  }
+}
+
+/* ==================================== */
+/* comment modal */
+/* Mobile view */
+@media screen and (width <= 764px) {
+  .comment_container {
+    width: 94%;
+    height: 90%;
+  }
+  .upper {
+    padding: 0;
+    height: 13vh;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .upper_sub_nav a,
+  .upper_create_post a {
+    font-size: 1rem;
+  }
+}
+
+/* Added styling for like and love functionality */
+.love_image {
+  display: none;
+}
+
+/* show love image */
+.showImage .love_image {
+  display: block;
+}
+
+/* don't display like icon */
+.showImage .like_image {
+  display: none;
+}
+
+.showFlex {
+  display: flex;
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    padding: 1em 1em;
+  }
+
+  nav .logo {
+    width: 10%;
+  }
+
+  nav .logo img {
+    width: 5em;
+  }
+
+  nav .Search {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border: none;
+    border-radius: 4em;
+    padding: 1em;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .Search img {
+    align-items: end;
+    justify-items: end;
+    display: none;
+  }
+
+  .Search input {
+    border: 0;
+    margin: 0;
+    background-color: transparent;
+    padding: 0.7em;
+    outline: none;
+    color: white;
+    width: 100%;
+    display: none;
+  }
+
+  .navigation-icons {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+  }
+
+  #navigation-icons {
+    gap: 1em;
+  }
+
+  .navigation-icons ul div p {
+    display: none;
+  }
+
+  .navigation-icons ul div i {
+    font-size: 2.3em;
+    padding: 0.5em;
+  }
+
+  .contact-search {
+    display: flex;
+    padding: 0.2rem;
+    align-items: center;
+  }
+
+  .navigation-icons div img {
+    width: 3.6em;
+    padding: 0.5em;
+  }
+
+  .profile img {
+    width: 4em !important;
+  }
+
+  .black,
+  .white {
+    width: 1em;
+  }
+
+  .black {
+    display: none;
+  }
+
+  .navigation-icons div:hover {
+    cursor: pointer;
+    background-color: white;
+    color: #000000;
+  }
+
+  .navigation-icons div:hover .white {
+    display: none;
+  }
+
+  .navigation-icons div:hover .black {
+    display: block;
+  }
+
+  .navigation-icons .hamburger {
+    background-color: #000000ad;
+    padding: 0.5em;
+    /* position: fixed; */
+    top: 0.1em;
+    right: 0;
+    width: fit-content;
+    display: flex;
+    color: white;
+    font-size: 2em;
+    z-index: 1;
+  }
+
+  #hamburger-icon {
+    display: flex;
+  }
+
+  .fullpage {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: fixed;
+    z-index: 1;
+    top: 3.2em;
+    width: 100%;
+    display: none;
+  }
+
+  .all {
+    width: 100%;
+    position: relative;
+    left: 0;
+    padding: 1em;
+    border-top-left-radius: 0;
+  }
+
+  .upper {
+    width: 100%;
+    padding-left: 0;
+    font-size: 0.9em;
+  }
+
+  .img {
+    width: 100%;
+  }
+}

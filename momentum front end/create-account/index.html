@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="google-signin-client_id"
+      content="865312802964-9ue0ol0578nk9f5rh7d0aircdiombr52.apps.googleusercontent.com"
+    />
+    <link rel="stylesheet" href="./create.css" />
+    <link rel="stylesheet" href="../../src/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script defer src="./create.js"></script>
+    <title>Create Account</title>
+</head>
+<body>
+    <div class="flex flex-col lg:flex-row min-h-screen w-full">
+        <div class="relative flex flex-col lg:w-1/2 p-4 lg:p-10 flex-grow">
+            <div class="absolute top-4 left-4 lg:left-10">
+                <a href="../../index.html">
+                    <img
+                      src="../../src/images/momentom-logo.png"
+                      alt="momentom-logo"
+                      class="h-12 lg:h-16"
+                    />
+                </a>
+            </div>
+
+            <div
+              class="flex flex-col justify-center items-center flex-grow mt-16 mb-16 px-4 lg:px-0"
+            >
+                <h1
+                  class="text-2xl lg:text-3xl text-white uppercase font-bold mb-4 text-center"
+                >
+                  Create Your Account
+                </h1>
+
+                <form
+                  class="flex flex-col [&_label]:text-white [&_input]:outline-none space-y-3 w-full max-w-xs lg:max-w-sm"
+                  action="create.php"
+                  method="post"
+                >
+                    <label for="fullName">Full Name</label>
+                    <input
+                      type="text"
+                      name="fullName"
+                      id="fullName"
+                      class="p-2 border rounded"
+                      required
+                    />
+
+                    <label for="email">Email</label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      class="p-2 border rounded"
+                      required
+                    />
+
+                    <label for="password">Password</label>
+                    <input
+                      type="password"
+                      name="password"
+                      id="password"
+                      class="p-2 border rounded"
+                      required
+                    />
+
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input
+                      type="password"
+                      name="confirmPassword"
+                      id="confirmPassword"
+                      class="p-2 border rounded"
+                      required
+                    />
+
+                    <p class="text-sm text-white ml-auto hover:underline">
+                      <a href="#">Forgot password?</a>
+                    </p>
+
+                    <div class="flex items-center space-x-2">
+                      <input type="checkbox" name="remember-me" id="remember-me" />
+                      <label for="remember-me" class="text-sm">Remember me</label>
+                    </div>
+
+                    <button
+                      type="submit"
+                      class="bg-gradient-to-r from-[#D618CE,20%] to-[#161515] text-white p-2 rounded"
+                    >
+                      Sign Up
+                    </button>
+                </form>
+
+                <div
+                  class="flex justify-center items-center space-x-3 mt-4 w-full max-w-xs lg:max-w-sm"
+                >
+                  <div class="bg-white w-full h-[0.03rem]"></div>
+                  <p class="text-white">or</p>
+                  <div class="bg-white w-full h-[0.03rem]"></div>
+                </div>
+
+                <div
+                  class="flex flex-col justify-center items-center mt-5 mb-5 space-y-3"
+                >
+                  <p class="text-white">
+                    Already have an account?
+                    <a class="text-purple-900" href="../login/">Login</a>
+                  </p>
+                </div>
+            </div>
+
+            <p
+              class="absolute bottom-4 lg:left-2 w-full text-center text-white text-sm"
+            >
+              &copy              &copy; 2024 Momentom. All rights reserved.
+            </p>
+        </div>
+
+        <div class="hidden lg:flex w-1/2 min-h-screen">
+          <img
+            src="../../src/images/girl-on-glasses.webp"
+            alt="girl-on-glasses"
+            class="w-full lg:h-full 2xl:h-screen object-cover"
+          />
+        </div>
+      </div>
+    </body>
+  </html>

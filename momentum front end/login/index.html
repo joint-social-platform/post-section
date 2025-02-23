@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="../../src/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Login</title>
+</head>
+<body>
+    <div class="flex flex-col lg:flex-row h-screen">
+        <div class="relative flex flex-col lg:w-1/2 p-4 lg:p-10">
+            <div class="absolute top-4 left-4 lg:left-10">
+                <a href="../../index.html">
+                    <img src="../../src/images/momentom-logo.png" alt="momentom-logo" class="h-12 lg:h-16">
+                </a>
+            </div>
+
+            <div class="flex flex-col justify-center items-center flex-grow mt-16 mb-16 px-4 lg:px-0">
+                <h1 class="text-2xl lg:text-3xl text-white uppercase font-bold mb-4 text-center">Welcome Back</h1>
+
+                <form class="form-login flex flex-col space-y-3 w-full max-w-xs lg:max-w-sm" action="login.php" method="post">
+                    <label for="email" class="text-white">Email</label>
+                    <input type="email" name="email" id="email" required class="p-2 border rounded">
+
+                    <label for="password" class="text-white">Password</label>
+                    <input type="password" name="password" id="password" required class="p-2 border rounded">
+
+                    <p class="text-sm text-white ml-auto hover:underline">
+                        <a href="#">Forgot password?</a>
+                    </p>
+
+                    <div class="flex items-center space-x-2">
+                        <input type="checkbox" name="remember-me" id="remember-me">
+                        <label for="remember-me" class="text-sm text-white">Remember me</label>
+                    </div>
+
+                    <button type="submit" class="bg-gradient-to-r from-[#D618CE,20%] to-[#161515] text-white p-2 rounded">Sign In</button>
+                </form>
+
+                <div class="flex justify-center items-center space-x-3 mt-4 w-full max-w-xs lg:max-w-sm">
+                    <div class="bg-white w-full h-[0.03rem]"></div>
+                    <p class="text-white">or</p>
+                    <div class="bg-white w-full h-[0.03rem]"></div>
+                </div>
+
+                <div class="flex flex-col justify-center items-center mt-5 mb-5 space-y-3">
+                    <p class="text-white">
+                        Don't have an account?
+                        <a class="text-purple-900" href="../create-account/">Create an Account</a>
+                    </p>
+                </div>
+            </div>
+
+            <p class="absolute bottom-0 lg:left-2 w-full text-center text-white text-sm">&copy; 2024 Momentom. All rights reserved.</p>
+        </div>
+
+        <div class="hidden lg:flex w-1/2">
+            <img src="../../src/images/girl-on-glasses.webp" alt="girl-on-glasses" class="h-full w-full object-cover">
+        </div>
+    </div>
+
+    <script defer src="./login.js"></script>
+</body>
+</html>
